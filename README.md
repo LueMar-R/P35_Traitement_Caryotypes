@@ -25,9 +25,11 @@ Les logiciels de réalisation des caryotypes actuels sont semi-automatiques et n
 Le travail de classification se fait en utilisant uniquement les caryotypes.
 
 En premier lieu, un travail est réalisé pour extraire des images de chromosomes de chacun des 203 caryotypes. On obtient donc environ 23x203=4669 images de chromosomes (plus ou moins, en fonction des anomalies qui ont pu êtres rencontrées : trisomies, monosomies, ...).<br>
-Les images obtenues sont similaires aux images ci-dessous :
+Les images obtenues, extraites et enregistrées accompagnées de leur label (leur n° chromosomique), permettront d'entrainer un modèle de classification. <br>Ce images sont similaires à celles visibles ci-dessous :
 
 [separated](images/separated.png)
+
+Le code pour obtenir les images et leur label est décrit dnas le notebook []()
 
 ## Segmentation des images des chromosomes
    -    Description de l’approche proposée
