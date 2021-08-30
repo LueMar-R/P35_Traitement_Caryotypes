@@ -37,7 +37,7 @@ Une data-augmentation a été réalisée pour donner une rotation aléatoire à 
 Un modèle séquentiel de CNN convolutif est ensuite entrainé sur les images. 
 
 Les résultats en sortie du modèle sont plutôt bons, avec une accuracy finale de 89% sur la base de test.
-![cmat](images/cmat.png)
+![cmat](images/confmat.png)
 
 
 ## Segmentation des images des chromosomes
