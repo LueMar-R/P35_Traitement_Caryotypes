@@ -33,10 +33,11 @@ Le code pour obtenir les images et leur label est décrit dnas le notebook [chom
 
 Grâce à ces images on peut ensuite entrainer un modèle de classification efficace. 
 
-Une data-augmentation a été réalisée pour donner une rotation aléatoire à chaque image, les chromosomes détectés dans les mélanges n'étant pas dirigés tous dnas le même sens.<br>
+Une data-augmentation a été réalisée pour donner une rotation aléatoire à chaque image, 
+les chromosomes détectés dans les mélanges n'étant pas dirigés tous dans le même sens.<br>
 Un modèle séquentiel de CNN convolutif est ensuite entrainé sur les images. 
 
-Les résultats en sortie du modèle sont plutôt bons, avec une accuracy finale de 89% sur la base de test.
+Les résultats en sortie du modèle sont plutôt bons, avec une accuracy finale de 90% sur la base de test.
 ![cmat](images/confmat.png)
 
 
