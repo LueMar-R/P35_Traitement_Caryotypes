@@ -82,6 +82,8 @@ Un exemple :
 
 ![annot](images/annot.jpg)
 
+### Utilisation des deux script python
+
 Pour utiliser ce modèle il faut au préalable installé `pytroch` ou utiliser un `Google Colab` (qui possède déjà pytorch), __pour l’utilisation avec colab__ il faudra modifier la partie `argparse.ArgumentParser()` et __dans tous les cas__ supprimer la partie `ContourAttention()` dans le fichier `Unet_plus.py`.
 
 Une fois tout cela fait, il ne restera plus qu'à fournir une __image en 256 x 256__ au modèle pour qu’il retourne un masque,les régions de chevauchement et les régions de non-chevauchement.
