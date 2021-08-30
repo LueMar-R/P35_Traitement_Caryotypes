@@ -38,6 +38,7 @@ les chromosomes détectés dans les mélanges n'étant pas dirigés tous dans le
 Un modèle séquentiel de CNN convolutif est ensuite entrainé sur les images. 
 
 Les résultats en sortie du modèle sont plutôt bons, avec une accuracy finale de 90% sur la base de test.
+
 ![cmat](images/confmat.png)
 
 
