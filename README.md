@@ -78,7 +78,7 @@ Dans cet UNet++ guidé par région, nous avons étendu UNet++ pour qu'il devienn
 
 Le modèle a été entraîné avec 345 images en 256 x 256 toutes annoté avec deux images binaires représentant les régions de chevauchement et les régions de non-chevauchement.
 
-Un exemple :
+Un exemple d'annotation:
 
 ![annot](images/annot.jpg)
 
