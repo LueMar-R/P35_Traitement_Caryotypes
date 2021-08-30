@@ -29,7 +29,7 @@ Les images obtenues, extraites et enregistrées accompagnées de leur label (leu
 
 ![separated](images/separated.png)
 
-Le code pour obtenir les images et leur label est décrit dnas le notebook [chomosomes_extraction.ipynb](chomosomes_extraction.ipynb)
+Le code pour obtenir les images et leur label est décrit dans le notebook [chomosomes_extraction.ipynb](chomosomes_extraction.ipynb)
 
 Grâce à ces images on peut ensuite entrainer un modèle de classification efficace. 
 
@@ -46,7 +46,7 @@ Les résultats en sortie du modèle sont plutôt bons, avec une accuracy finale 
 
 Différentes approches ont été testées pour la segmentation des vues microscopiques des cellules en phase de mitose ("mélanges"). 
 
-Le défi dans cette segmentation est de séparer les chromosomes qui pésentent un chevauchement. Pour les chromosomes isolés, une segmentation avec des outils simples comme les méthodes déjà implémentées dnas scikit-image conviennent (voir [Label Image Regions](https://scikit-image.org/docs/dev/auto_examples/segmentation/plot_label.html#sphx-glr-auto-examples-segmentation-plot-label-py)).
+Le défi dans cette segmentation est de séparer les chromosomes qui pésentent un chevauchement. Pour les chromosomes isolés, une segmentation avec des outils simples comme les méthodes déjà implémentées dans scikit-image conviennent (voir [Label Image Regions](https://scikit-image.org/docs/dev/auto_examples/segmentation/plot_label.html#sphx-glr-auto-examples-segmentation-plot-label-py)).
 
 
 Nous avons d'abord tenté une segmentation sémantique multiclasse en créant nos propres chevauchements de chromosomes avec leurs masques de segmentation. Malheureusement, ces mélanges créés de toutes pièces ne ressemblaient aps assez aux mélanges réels, et les résultats sur les mélanges réels n'étaient pas bons.
@@ -56,7 +56,7 @@ Nous avons ensuite essayé une segmentation par instance avec pytorch et détect
 Finalement, la solution résidait dans l'article scientifique de Cao X et Al, _ChromSeg: Two-Stage Framework for Overlapping
 Chromosome Segmentation and Reconstruction_ .
 
-Lien vers l'article : http://www.bio8.cs.hku.hk/pdf/chromseg.pdf
+Lien vers l'article : http://www.bio8.cs.hku.hk/pdf/chromseg.pdf </br>
 LIen vers le github : https://github.com/HKU-BAL/ChromSeg
 
 Cette équipe de recherche est parvenue à segmenter les chevauchements de chromosomes en utilisant un réseau UNet++, qui extrait séparément les croisements et chacun des chromosomes.
