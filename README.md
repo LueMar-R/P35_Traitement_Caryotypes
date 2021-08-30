@@ -27,9 +27,18 @@ Le travail de classification se fait en utilisant uniquement les caryotypes.
 En premier lieu, un travail est réalisé pour extraire des images de chromosomes de chacun des 203 caryotypes. On obtient donc environ 23x203=4669 images de chromosomes (plus ou moins, en fonction des anomalies qui ont pu êtres rencontrées : trisomies, monosomies, ...).<br>
 Les images obtenues, extraites et enregistrées accompagnées de leur label (leur n° chromosomique), permettront d'entrainer un modèle de classification. <br>Ce images sont similaires à celles visibles ci-dessous :
 
-[separated](images/separated.png)
+![separated](images/separated.png)
 
 Le code pour obtenir les images et leur label est décrit dnas le notebook [chomosomes_extraction.ipynb](chomosomes_extraction.ipynb)
+
+Grâce à ces images on peut ensuite entrainer un modèle de classification efficace. 
+
+Une data-augmentation a été réalisée pour donner une rotation aléatoire à chaque image, les chromosomes détectés dans les mélanges n'étant pas dirigés tous dnas le même sens.<br>
+Un modèle séquentiel de CNN convolutif est ensuite entrainé sur les images. 
+
+Les résultats en sortie du modèle sont plutôt bons, avec une accuracy finale de 84% sur la base de test.
+
+
 
 ## Segmentation des images des chromosomes
    -    Description de l’approche proposée
