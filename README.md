@@ -57,4 +57,6 @@ Finalement, la solution résidait dans l'article scientifique de Cao X et Al, _C
 Chromosome Segmentation and Reconstruction_ .
 Cette équipe de recherche est parvenue à segmenter les chevauchements de chromosomes en utilisant un réseau UNet++, qui extrait séparément les croisements et chacun des chromosomes.
 
+Lien vers l'article : http://www.bio8.cs.hku.hk/pdf/chromseg.pdf
+
 
