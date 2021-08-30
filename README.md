@@ -55,8 +55,32 @@ Nous avons ensuite essayé une segmentation par instance avec pytorch et détect
 
 Finalement, la solution résidait dans l'article scientifique de Cao X et Al, _ChromSeg: Two-Stage Framework for Overlapping
 Chromosome Segmentation and Reconstruction_ .
-Cette équipe de recherche est parvenue à segmenter les chevauchements de chromosomes en utilisant un réseau UNet++, qui extrait séparément les croisements et chacun des chromosomes.
 
 Lien vers l'article : http://www.bio8.cs.hku.hk/pdf/chromseg.pdf
+LIen vers le github : https://github.com/HKU-BAL/ChromSeg
+
+Cette équipe de recherche est parvenue à segmenter les chevauchements de chromosomes en utilisant un réseau UNet++, qui extrait séparément les croisements et chacun des chromosomes.
+
+Leurs approche est composé de deux partie : 
+* La première, qui est le modèle
+* et la seconde, qui est le script pour obtenir les deux chromosome
+
+Le schéma générale de la solution :
+
+![framework](images/framework.jpg)
+
+Et plus en détail, le schéma Unet++ utilisé :
+
+![unet++](images/unetplusplus.jpg)
+
+Le modèle a été entraîné avec 345 images en 256 x 256 toutes annoté avec deux images binaires représentant les régions de chevauchement et les régions de non-chevauchement.
+Un exemple :
+
+![annot](images/annot.jpg)
+
+Pour utiliser ce modèle il faut au préalable installé `pytroch` ou utiliser un `Google Colab` (qui possède déjà pytorch), __pour l’utilisation avec colab__ il faudra modifier la partie `argparse.ArgumentParser()` et __dans tous les cas__ supprimer la partie `ContourAttention()` dans le fichier `Unet_plus.py`.
+
+Une fois tout cela fait, il ne restera plus qu'à fournir une __image en 256 x 256__ au modèle pour qu’il retourne un masque,les régions de chevauchement et les régions de non-chevauchement.
+Ensuite une fois en possession de tout les images, il suffit de donner l’image de base, le masque, et les régions de chevauchement au deuxième script pour qu'il sépare les chromosomes.
 
 
