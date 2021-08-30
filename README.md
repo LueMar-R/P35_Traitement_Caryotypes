@@ -74,6 +74,7 @@ Et plus en détail, le schéma Unet++ utilisé :
 ![unet++](images/unetplusplus.jpg)
 
 Le modèle a été entraîné avec 345 images en 256 x 256 toutes annoté avec deux images binaires représentant les régions de chevauchement et les régions de non-chevauchement.
+
 Un exemple :
 
 ![annot](images/annot.jpg)
