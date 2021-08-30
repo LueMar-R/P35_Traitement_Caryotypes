@@ -73,6 +73,9 @@ Et plus en détail, le schéma Unet++ utilisé :
 
 ![unet++](images/unetplusplus.jpg)
 
+Il s'agit d'un réseau de segmentation sémantique pour séparer les régions de chevauchement et de non-chevauchement des images d'entrée. L'idée de l'UNet++ guidé par région a été inspiré par UNet++, qui est un neurone convolutif réseau pour la segmentation d'images qui ajoute des modules d'agrégation densément sur la connexion de saut de son prédécesseur U-Net pour fusionner mieux les informations.</br>
+Dans cet UNet++ guidé par région, nous avons étendu UNet++ pour qu'il devienne un prédicteur de région multibranche. L'entrée de l'UNet++ guidé par région est une image 256 × 256 RVB à 3 canaux. Nous avons utilisé un U-Net peu profond comme encodeur-décodeur et ajouté trois couches de convolution médianes au chemin de connexion de saut.
+
 Le modèle a été entraîné avec 345 images en 256 x 256 toutes annoté avec deux images binaires représentant les régions de chevauchement et les régions de non-chevauchement.
 
 Un exemple :
