@@ -2,7 +2,7 @@
 
 ## Introduction
 
-### Enjeux de la reconaissance des chromosomes
+### Enjeux de la reconnaissance des chromosomes
 
 A l’heure actuelle, les cancers du sang, hémopathies malignes, représentent 30% des cancers de l’enfant et 5% des cancers chez l’adulte. Afin de pouvoir classifier ces cancers, il est nécessaire de prendre en compte le tissu d’origine, la morphologie, les marqueurs protéiques, ainsi que les données chromosomiques de ces cancers. Les cancers du sang sont diagnostiqués grâce au caryotype, car ils sont dus à une translocation de gènes, dans laquelle les chromosomes 9 et 22 ont échangé réciproquement des fragments de chromosomes.
 
