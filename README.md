@@ -29,7 +29,7 @@ Les images obtenues, extraites et enregistrées accompagnées de leur label (leu
 
 [separated](images/separated.png)
 
-Le code pour obtenir les images et leur label est décrit dnas le notebook []()
+Le code pour obtenir les images et leur label est décrit dnas le notebook [chomosomes_extraction.ipynb](chomosomes_extraction.ipynb)
 
 ## Segmentation des images des chromosomes
    -    Description de l’approche proposée
