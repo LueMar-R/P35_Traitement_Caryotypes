@@ -43,8 +43,18 @@ Les résultats en sortie du modèle sont plutôt bons, avec une accuracy finale 
 
 
 ## Segmentation des images des chromosomes
-   -    Description de l’approche proposée
-   -    Évaluation de l’approche proposée
-   -    Conclusion ( Dans cette partie vous pouvez ajouter les difficultés rencontrées et les pistes explorées)
+
+Différentes approches ont été testées pour la segmentation des vues microscopiques des cellules en phase de mitose ("mélanges"). 
+
+Le défi dans cette segmentation est de séparer les chromosomes qui pésentent un chevauchement. Pour les chromosomes isolés, une segmentation avec des outils simples comme les méthodes déjà implémentées dnas scikit-image conviennent (voir [Label Image Regions](https://scikit-image.org/docs/dev/auto_examples/segmentation/plot_label.html#sphx-glr-auto-examples-segmentation-plot-label-py)).
+
+
+Nous avons d'abord tenté une segmentation sémantique multiclasse en créant nos propres chevauchements de chromosomes avec leurs masques de segmentation. Malheureusement, ces mélanges créés de toutes pièces ne ressemblaient aps assez aux mélanges réels, et les résultats sur les mélanges réels n'étaient pas bons.
+
+Nous avons ensuite essayé une segmentation par instance avec pytorch et détectron, en labelisant manuellement les mélanges réels existants. Les résultats, légèrements meilleurs que les précédents, n'étaient pas non plus convainquants.
+
+Finalement, la solution résidait dans l'article scientifique de Cao X et Al, _ChromSeg: Two-Stage Framework for Overlapping
+Chromosome Segmentation and Reconstruction_ .
+Cette équipe de recherche est parvenue à segmenter les chevauchements de chromosomes en utilisant un réseau UNet++, qui extrait séparément les croisements et chacun des chromosomes.
 
 
